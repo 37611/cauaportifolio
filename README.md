@@ -84,3 +84,4 @@ O projeto já contém o arquivo `vercel.json` configurado:
 ---
 
 © 2026 Cauã Nascimento Sanches. Todos os direitos reservados.
+
