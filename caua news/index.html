@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Cauã Nascimento Sanches — Estudante de TI & Desenvolvedor em Formação</title>
+  <meta name="title" content="Cauã Nascimento Sanches — Estudante de TI & Desenvolvedor em Formação">
+  <meta name="description" content="Portfólio de Cauã Nascimento Sanches. Estudante de Tecnologia da Informação apaixonado por programação, desenvolvimento web, APIs e criação de soluções digitais.">
+  <meta name="author" content="Cauã Nascimento Sanches">
+  <meta name="keywords" content="Cauã Nascimento Sanches, Desenvolvedor Front-end, Estudante de TI, Portfólio, HTML, CSS, JavaScript, React, Java, Node.js, Vercel, GitHub">
+  <meta name="theme-color" content="#0a0c14">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://portifolio-caua.vercel.app">
+  <meta property="og:title" content="Cauã Nascimento Sanches — Estudante de TI & Desenvolvedor em Formação">
+  <meta property="og:description" content="Portfólio com projetos reais em HTML5, CSS3, JavaScript, React, Node.js e Java. Soluções web modernas e responsivas.">
+  <meta property="og:image" content="https://portifolio-caua.vercel.app/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Cauã Nascimento Sanches — Portfólio">
+  <meta property="twitter:description" content="Estudante de Tecnologia da Informação e desenvolvedor em formação. Conheça meus projetos e habilidades.">
+
+  <!-- Favicon Dinâmico em SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230d111c%22 stroke=%22%233b82f6%22 stroke-width=%224%22/><text y=%2268%22 x=%2250%22 font-size=%2246%22 font-family=%22monospace%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22%2360a5fa%22>&lt;C/&gt;</text></svg>">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos Principais -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Canvas Interativo de Partículas Tecnológicas -->
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <!-- Brilhos de Fundo (Ambient Glows) -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+
+  <!-- HEADER / NAVEGAÇÃO PRINCIPAL -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner container">
+      <a href="#inicio" class="brand-link" aria-label="Cauã Nascimento Sanches — Início">
+        <span class="brand-symbol" aria-hidden="true">&lt;C/S&gt;</span>
+        <span class="brand-text">Cauã <span class="brand-highlight">Sanches</span></span>
+      </a>
+
+      <nav class="nav-desktop" id="navDesktop" aria-label="Navegação principal">
+        <a href="#inicio" class="nav-item active" data-section="inicio">Início</a>
+        <a href="#sobre" class="nav-item" data-section="sobre">Sobre Mim</a>
+        <a href="#projetos" class="nav-item" data-section="projetos">Projetos</a>
+        <a href="#habilidades" class="nav-item" data-section="habilidades">Habilidades</a>
+        <a href="#contato" class="nav-item" data-section="contato">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://github.com/37661-hue" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost github-header-btn" title="Ver perfil no GitHub">
+          <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span class="github-text">GitHub</span>
+        </a>
+
+        <button class="mobile-toggle-btn" id="mobileToggleBtn" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <nav class="mobile-nav" aria-label="Navegação mobile">
+        <a href="#inicio" class="mobile-nav-item active" data-section="inicio">
+          <span class="mono-num">01.</span> Início
+        </a>
+        <a href="#sobre" class="mobile-nav-item" data-section="sobre">
+          <span class="mono-num">02.</span> Sobre Mim
+        </a>
+        <a href="#projetos" class="mobile-nav-item" data-section="projetos">
+          <span class="mono-num">03.</span> Projetos
+        </a>
+        <a href="#habilidades" class="mobile-nav-item" data-section="habilidades">
+          <span class="mono-num">04.</span> Habilidades
+        </a>
+        <a href="#contato" class="mobile-nav-item" data-section="contato">
+          <span class="mono-num">05.</span> Contato
+        </a>
+      </nav>
+
+      <div class="mobile-drawer-footer">
+        <a href="https://github.com/37661-hue" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">
+          <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          Acessar GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- SEÇÃO INICIAL (HERO) -->
+    <section class="section hero-section" id="inicio">
+      <div class="container hero-container">
+        
+        <div class="hero-content reveal-on-scroll">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span class="status-text">Disponível para novos aprendizados e desafios</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-name">CAUÃ NASCIMENTO SANCHES</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Estudante de Tecnologia da Informação <span class="divider">|</span> Desenvolvedor em Formação
+          </p>
+
+          <p class="hero-description">
+            Olá! Sou Cauã Nascimento Sanches, estudante de Tecnologia da Informação, apaixonado por tecnologia, programação e desenvolvimento de sistemas. Estou sempre buscando aprender novas ferramentas, desenvolver projetos e aprimorar minhas habilidades para transformar ideias em soluções digitais.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projetos" class="btn btn-primary btn-lg">
+              <span>Conheça meus projetos</span>
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <a href="#sobre" class="btn btn-secondary btn-lg">
+              <span>Sobre mim</span>
+            </a>
+
+            <a href="https://github.com/37661-hue" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg" aria-label="Acessar meu GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+
+          <!-- Destaques Rápidos -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">TI</span>
+              <span class="stat-label">Área de Formação</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Projetos no GitHub</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+              <span class="stat-number">Web</span>
+              <span class="stat-label">Front & Back-end</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Interativo Mockup -->
+        <div class="hero-visual reveal-on-scroll">
+          <div class="code-terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">caua-sanches.config.ts</div>
+              <div class="terminal-badge">DEV MODE</div>
+            </div>
+            <div class="terminal-body">
+              <pre><code><span class="code-comment">// Perfil e Diretrizes de Desenvolvimento</span>
+<span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">"Cauã Nascimento Sanches"</span>,
+  <span class="code-prop">focus</span>: <span class="code-string">"Desenvolvimento Web & Soluções Digitais"</span>,
+  <span class="code-prop">education</span>: <span class="code-string">"Tecnologia da Informação"</span>,
+  <span class="code-prop">stack</span>: [
+    <span class="code-string">"HTML5"</span>, <span class="code-string">"CSS3"</span>, <span class="code-string">"JavaScript"</span>,
+    <span class="code-string">"React"</span>, <span class="code-string">"Node.js"</span>, <span class="code-string">"Java"</span>
+  ],
+  <span class="code-prop">methodology</span>: [
+    <span class="code-string">"Clean Code"</span>,
+    <span class="code-string">"Arquitetura MVC"</span>,
+    <span class="code-string">"Mobile First"</span>
+  ],
+  <span class="code-prop">status</span>: <span class="code-string">"Buscando evolução contínua 🚀"</span>
+};
+
+<span class="code-function">console</span>.<span class="code-call">log</span>(<span class="code-string">"Transformando ideias em código funcional."</span>);</code></pre>
+            </div>
+            <div class="terminal-footer">
+              <span class="terminal-prompt">$ git commit -m "feat: building future"</span>
+              <span class="terminal-cursor"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE MIM -->
+    <section class="section about-section" id="sobre">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">01. Conheça minha história</span>
+          <h2 class="section-title">Sobre Mim</h2>
+          <div class="section-bar"></div>
+        </div>
+
+        <div class="about-grid">
+          
+          <div class="about-text-column reveal-on-scroll">
+            <h3 class="about-lead">
+              Construindo uma base sólida em tecnologia através de prática constante e dedicação.
+            </h3>
+
+            <p class="about-paragraph">
+              Sou estudante de <strong>Tecnologia da Informação</strong> e estou construindo minha trajetória no universo da programação com muito empenho, curiosidade e determinação. Desde o primeiro contato com o desenvolvimento de software, percebi o impacto transformador que o código bem estruturado pode proporcionar no dia a dia das pessoas.
+            </p>
+
+            <p class="about-paragraph">
+              Tenho um interesse especial por <strong>programação e desenvolvimento web</strong>, dedicando-me tanto à criação de interfaces dinâmicas e responsivas no Front-end quanto à construção e consumo de APIs no Back-end. Acredito que o verdadeiro domínio tecnológico é resultado de um <strong>aprendizado constante</strong>, o que me motiva a explorar continuamente novas ferramentas, padrões de projeto e tecnologias emergentes.
+            </p>
+
+            <p class="about-paragraph">
+              Ao longo dos meus estudos, venho desenvolvendo uma série de <strong>projetos acadêmicos e pessoais</strong> — desde catálogos web completos e sistemas com arquitetura MVC em Java até aplicações modernas em React e serviços integrados na nuvem. Meu objetivo central é evoluir a cada desafio, criando sites, sistemas e soluções tecnológicas eficientes, organizadas e acessíveis.
+            </p>
+
+            <div class="about-highlights-list">
+              <div class="about-highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <div>
+                  <h4 class="highlight-title">Foco em Desenvolvimento Web</h4>
+                  <p class="highlight-desc">Criação de páginas dinâmicas, integração com APIs REST e interfaces responsivas.</p>
+                </div>
+              </div>
+
+              <div class="about-highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                </div>
+                <div>
+                  <h4 class="highlight-title">Aprendizado & Evolução Contínua</h4>
+                  <p class="highlight-desc">Pesquisa ativa, leitura de documentações oficiais e prática em projetos reais.</p>
+                </div>
+              </div>
+
+              <div class="about-highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                </div>
+                <div>
+                  <h4 class="highlight-title">Arquitetura & Organização</h4>
+                  <p class="highlight-desc">Estruturação limpa de código, MVC, separação de responsabilidades e controle com Git.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna Visual / Cards de Pilares -->
+          <div class="about-cards-column reveal-on-scroll">
+            <div class="pillar-card">
+              <div class="pillar-badge">ACADÊMICO</div>
+              <h4 class="pillar-title">Formação em TI</h4>
+              <p class="pillar-desc">
+                Estudos aprofundados em lógica de programação, estruturas de dados, banco de dados relacional e engenharia de software básica.
+              </p>
+              <div class="pillar-tags">
+                <span class="tag">Lógica</span>
+                <span class="tag">POO</span>
+                <span class="tag">Bancos de Dados</span>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-badge">PRÁTICA</div>
+              <h4 class="pillar-title">Projetos Reais & Versionamento</h4>
+              <p class="pillar-desc">
+                Aplicação imediata de cada conceito estudado em repositórios públicos versionados com Git e publicados em ambientes de produção como a Vercel.
+              </p>
+              <div class="pillar-tags">
+                <span class="tag">Git & GitHub</span>
+                <span class="tag">Vercel</span>
+                <span class="tag">Deploy Contínuo</span>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-badge">OBJETIVO</div>
+              <h4 class="pillar-title">Soluções que Agregam Valor</h4>
+              <p class="pillar-desc">
+                Desenvolver sistemas úteis, com boa usabilidade, desempenho otimizado e código legível de fácil manutenção em equipe.
+              </p>
+              <div class="pillar-tags">
+                <span class="tag">Usabilidade</span>
+                <span class="tag">Clean Code</span>
+                <span class="tag">Responsividade</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO PROJETOS -->
+    <section class="section projects-section" id="projetos">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">02. Portfólio de Trabalhos</span>
+          <h2 class="section-title">Principais Projetos</h2>
+          <p class="section-subtitle">
+            Projetos reais desenvolvidos e versionados no meu perfil do GitHub, abrangendo aplicações Front-end, APIs Back-end e sistemas em Java.
+          </p>
+          <div class="section-bar"></div>
+        </div>
+
+        <!-- Filtros de Projetos -->
+        <div class="projects-filters reveal-on-scroll" role="tablist" aria-label="Filtrar projetos por categoria">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos os Projetos</button>
+          <button class="filter-btn" data-filter="frontend" role="tab" aria-selected="false">Front-end</button>
+          <button class="filter-btn" data-filter="backend" role="tab" aria-selected="false">Back-end & APIs</button>
+          <button class="filter-btn" data-filter="java" role="tab" aria-selected="false">Java (MVC)</button>
+          <button class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false">Full Stack / React</button>
+        </div>
+
+        <!-- Grid de Cards de Projetos -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- PROJETO 1: CineEquip Web (Frontend Audiovisual) -->
+          <article class="project-card reveal-on-scroll" data-category="frontend">
+            <div class="project-preview-box">
+              <div class="preview-glow"></div>
+              <div class="preview-mockup preview-cineequip">
+                <div class="mockup-header">
+                  <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+                  <span class="mock-url">front-audiovisual.vercel.app</span>
+                </div>
+                <div class="mockup-content">
+                  <div class="mock-nav">
+                    <span class="mock-logo">CineEquip</span>
+                    <span class="mock-pill">Catálogo 2026</span>
+                  </div>
+                  <div class="mock-cards-row">
+                    <div class="mock-mini-card">
+                      <div class="mini-card-thumb camera"></div>
+                      <div class="mini-card-line w-70"></div>
+                      <div class="mini-card-line w-40 highlight"></div>
+                    </div>
+                    <div class="mock-mini-card">
+                      <div class="mini-card-thumb lens"></div>
+                      <div class="mini-card-line w-60"></div>
+                      <div class="mini-card-line w-30 highlight"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="project-badge">Destaque Front-end</span>
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">Aplicação Web</span>
+                <span class="project-status">Publicado na Vercel</span>
+              </div>
+
+              <h3 class="project-title">CineEquip Web (Front Audiovisual)</h3>
+
+              <p class="project-description">
+                Interface web moderna e cinematográfica desenvolvida para visualização de catálogo de equipamentos audiovisuais. Consome assincronamente a API REST via Fetch, renderizando cards detalhados com especificações técnicas, marcas, modelos e valores formatados no padrão monetário brasileiro (R$).
+              </p>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3 (Grid/Flex)</span>
+                <span class="tech-tag">JavaScript Vanilla</span>
+                <span class="tech-tag">Fetch API</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/37661-hue/front-audiovisual" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>Ver Código</span>
+                </a>
+                <a href="https://front-audiovisual.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>Projeto Online</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 2: CineEquip API (Backend Audiovisual) -->
+          <article class="project-card reveal-on-scroll" data-category="backend">
+            <div class="project-preview-box">
+              <div class="preview-glow"></div>
+              <div class="preview-mockup preview-api">
+                <div class="mockup-header">
+                  <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+                  <span class="mock-url">backend-audiovisual.vercel.app</span>
+                </div>
+                <div class="mockup-content api-code-preview">
+                  <div class="api-method"><span class="badge-get">GET</span> <span class="api-endpoint">/api/equipamentos</span></div>
+                  <pre class="api-json"><code>{
+  "status": 200,
+  "data": [
+    { "id": 1, "item": "Cinema Camera 6K", "preco": 14500.00 },
+    { "id": 2, "item": "Lente Anamórfica", "preco": 6200.00 }
+  ]
+}</code></pre>
+                </div>
+              </div>
+              <span class="project-badge">API RESTful</span>
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">Back-end & API</span>
+                <span class="project-status">Serviço em Produção</span>
+              </div>
+
+              <h3 class="project-title">CineEquip API (Backend Audiovisual)</h3>
+
+              <p class="project-description">
+                Serviço de backend em Node.js com Express estruturado para fornecer dados confiáveis de equipamentos audiovisuais. Implementa roteamento modular (routes), modelos de dados (models), scripts de seed de banco de dados e testes, com publicação serverless configurada para a Vercel.
+              </p>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">REST API</span>
+                <span class="tech-tag">Vercel Serverless</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/37661-hue/backend-audiovisual" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>Ver Código</span>
+                </a>
+                <a href="https://backend-audiovisual.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>Acessar API</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 3: Reserva de Salas da Escola (Java Spring Boot MVC) -->
+          <article class="project-card reveal-on-scroll" data-category="java">
+            <div class="project-preview-box">
+              <div class="preview-glow"></div>
+              <div class="preview-mockup preview-java">
+                <div class="mockup-header">
+                  <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+                  <span class="mock-url">localhost:8080/api/reservas</span>
+                </div>
+                <div class="mockup-content java-code-preview">
+                  <div class="java-badge-banner">
+                    <span class="badge-java">Java 17</span>
+                    <span class="badge-spring">Spring Boot</span>
+                    <span class="badge-h2">H2 Database</span>
+                  </div>
+                  <pre class="java-code"><code>@RestController
+@RequestMapping("/api/salas")
+public class SalaController {
+  @Autowired
+  private SalaRepository repository;
+  
+  @GetMapping
+  public List&lt;Sala&gt; listar() {
+    return repository.findAll();
+  }
+}</code></pre>
+                </div>
+              </div>
+              <span class="project-badge">Arquitetura MVC</span>
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">Java & Spring Boot</span>
+                <span class="project-status">Projeto Acadêmico</span>
+              </div>
+
+              <h3 class="project-title">Reserva de Salas da Escola (API em MVC)</h3>
+
+              <p class="project-description">
+                Sistema acadêmico robusto implementado em Java com o framework Spring Boot. Utiliza o padrão arquitetural MVC (Model-View-Controller) com Spring Data JPA para persistência em banco H2 em memória, validação de regras de negócios e disponibilização de endpoints REST para gerenciamento de salas escolares.
+              </p>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">Spring Data JPA</span>
+                <span class="tech-tag">Arquitetura MVC</span>
+                <span class="tech-tag">Maven</span>
+                <span class="tech-tag">H2 Database</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/37661-hue/DES2---AD-Prova-de-API-em-MVC" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>Ver Repositório</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 4: Integração Front-Back & Autenticação (tema-front-back) -->
+          <article class="project-card reveal-on-scroll" data-category="fullstack">
+            <div class="project-preview-box">
+              <div class="preview-glow"></div>
+              <div class="preview-mockup preview-react">
+                <div class="mockup-header">
+                  <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+                  <span class="mock-url">tema-front-back.vercel.app</span>
+                </div>
+                <div class="mockup-content react-preview">
+                  <div class="react-top-bar">
+                    <span class="react-icon">⚛️</span>
+                    <span class="react-badge">React + Vite</span>
+                  </div>
+                  <div class="react-components-flow">
+                    <div class="flow-box">App.jsx</div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-box">Services API</div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-box highlight">Render UI</div>
+                  </div>
+                </div>
+              </div>
+              <span class="project-badge">Integração Full Stack</span>
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">React SPA & Services</span>
+                <span class="project-status">Publicado na Vercel</span>
+              </div>
+
+              <h3 class="project-title">Integração Front-Back (Tema & Serviços)</h3>
+
+              <p class="project-description">
+                Aplicação construída com React e Vite com foco em consumo assíncrono de serviços e gerenciamento de estado. Apresenta componentes desacoplados, arquitetura de serviços em JavaScript e integração de ponta a ponta entre interface e servidor.
+              </p>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Vite</span>
+                <span class="tech-tag">JavaScript JSX</span>
+                <span class="tech-tag">API Services</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/37661-hue/tema-front-back" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>Ver Código</span>
+                </a>
+                <a href="https://tema-front-back.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>Projeto Online</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 5: Front-end SPA Interativo -->
+          <article class="project-card reveal-on-scroll" data-category="frontend">
+            <div class="project-preview-box">
+              <div class="preview-glow"></div>
+              <div class="preview-mockup preview-spa">
+                <div class="mockup-header">
+                  <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+                  <span class="mock-url">front-end-sigma-ivory.vercel.app</span>
+                </div>
+                <div class="mockup-content spa-preview">
+                  <div class="spa-hero-block">
+                    <div class="spa-pill">SPA Interface</div>
+                    <div class="spa-title-line"></div>
+                    <div class="spa-grid-preview">
+                      <span class="grid-box"></span>
+                      <span class="grid-box"></span>
+                      <span class="grid-box"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="project-badge">Front-end Moderno</span>
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">Single Page Application</span>
+                <span class="project-status">Publicado na Vercel</span>
+              </div>
+
+              <h3 class="project-title">Front-End SPA Interativo</h3>
+
+              <p class="project-description">
+                Projeto estruturado com Vite e JavaScript moderno, aplicando divisão de componentes, estilos modulares e otimização de build para navegadores atuais. Demonstra práticas de desenvolvimento ágil de interfaces ricas com rápida resposta ao usuário.
+              </p>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Vite</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript Moderno</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/37661-hue/front-end" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>Ver Código</span>
+                </a>
+                <a href="https://front-end-sigma-ivory.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>Projeto Online</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 6: Interface de Autenticação / Login React -->
+          <article class="project-card reveal-on-scroll" data-category="fullstack">
+            <div class="project-preview-box">
+              <div class="preview-glow"></div>
+              <div class="preview-mockup preview-login">
+                <div class="mockup-header">
+                  <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+                  <span class="mock-url">auth-system.local</span>
+                </div>
+                <div class="mockup-content login-preview">
+                  <div class="login-card-inner">
+                    <span class="login-user-icon">👤</span>
+                    <div class="login-input-mock"></div>
+                    <div class="login-input-mock"></div>
+                    <div class="login-btn-mock">Entrar</div>
+                  </div>
+                </div>
+              </div>
+              <span class="project-badge">Autenticação & UI</span>
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">UI & Formulários</span>
+                <span class="project-status">Repositório Git</span>
+              </div>
+
+              <h3 class="project-title">Sistema de Login & Autenticação</h3>
+
+              <p class="project-description">
+                Interface de autenticação interativa desenvolvida com React e Vite. Aplica validações de campos de entrada, controle de estados controlados, foco na experiência do usuário (UX) e tratamento visual de mensagens de sucesso e erro.
+              </p>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Vite</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">CSS Modules</span>
+                <span class="tech-tag">Git</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/37661-hue/Login---React-Gustavo" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>Ver Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Banner GitHub Call to Action -->
+        <div class="projects-cta-box reveal-on-scroll">
+          <div class="cta-content">
+            <h4 class="cta-title">Quer explorar mais repositórios e códigos de estudo?</h4>
+            <p class="cta-desc">
+              Confira todos os meus projetos acadêmicos, testes de APIs e desafios práticos no meu perfil público do GitHub.
+            </p>
+          </div>
+          <a href="https://github.com/37661-hue" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>Ver perfil no GitHub (@37661-hue)</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO HABILIDADES -->
+    <section class="section skills-section" id="habilidades">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">03. Conhecimentos Técnicos</span>
+          <h2 class="section-title">Habilidades & Ferramentas</h2>
+          <p class="section-subtitle">
+            Tecnologias comprovadas e utilizadas na prática durante o desenvolvimento dos projetos acadêmicos e pessoais.
+          </p>
+          <div class="section-bar"></div>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Skill: HTML5 -->
+          <div class="skill-card reveal-on-scroll">
+            <div class="skill-icon-wrap html">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                <path d="M12 2l8 2.5-1.5 15.5L12 22l-6.5-2L4 4.5 12 2zm0 2.2L6.1 6.1l1.1 11.4L12 18.8l4.8-1.3 1.1-11.4L12 4.2zM8.5 8h7l-.3 2.5H8.7l.2 2.5h6.6l-.6 5-2.9.8-2.9-.8-.2-2h-1.8l.3 3.5 4.6 1.3 4.6-1.3 1-8.5H8.3L8.5 8z"/>
+              </svg>
+            </div>
+            <div class="skill-content">
+              <div class="skill-head">
+                <h4 class="skill-name">HTML5</h4>
+                <span class="skill-badge-level">Intermediário</span>
+              </div>
+              <p class="skill-description">
+                Estruturação semântica, formulários acessíveis, SEO básico e organização limpa de documentos web.
+              </p>
+              <div class="skill-progress-bar">
+                <div class="skill-progress" style="--level: 80%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: CSS3 & Responsividade -->
+          <div class="skill-card reveal-on-scroll">
+            <div class="skill-icon-wrap css">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                <path d="M12 2l8 2.5-1.5 15.5L12 22l-6.5-2L4 4.5 12 2zm0 2.2L6.1 6.1l1.1 11.4L12 18.8l4.8-1.3 1.1-11.4L12 4.2zM8.2 8h7.6l-.3 2.5H8.5l.2 2.5h6.3l-.6 5-2.4.7-2.4-.7-.2-2H7.6l.3 3.5 4.1 1.1 4.1-1.1 1-8.5H8.1L8.2 8z"/>
+              </svg>
+            </div>
+            <div class="skill-content">
+              <div class="skill-head">
+                <h4 class="skill-name">CSS3 & Responsividade</h4>
+                <span class="skill-badge-level">Intermediário</span>
+              </div>
+              <p class="skill-description">
+                Layouts fluidos com Flexbox e CSS Grid, animações suaves, design responsivo (Mobile First) e variáveis de tema.
+              </p>
+              <div class="skill-progress-bar">
+                <div class="skill-progress" style="--level: 78%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: JavaScript ES6+ -->
+          <div class="skill-card reveal-on-scroll">
+            <div class="skill-icon-wrap js">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                <path d="M3 3h18v18H3V3zm14.5 13.5v-6h-2v6h2zm-7.5-1.5c.3.8.9 1.5 2 1.5 1 0 1.8-.6 1.8-1.5 0-1-.8-1.4-1.8-1.8l-.5-.2c-1.3-.5-2.2-1.2-2.2-2.5 0-1.5 1.2-2.5 2.7-2.5 1.3 0 2.2.6 2.6 1.5l-1.6 1c-.2-.5-.5-.8-1-.8-.5 0-.9.3-.9.7 0 .5.4.8 1.3 1.2l.5.2c1.6.7 2.7 1.3 2.7 2.8 0 1.8-1.4 2.8-3.3 2.8-1.8 0-2.9-1-3.3-2.1l1-.5z"/>
+              </svg>
+            </div>
+            <div class="skill-content">
+              <div class="skill-head">
+                <h4 class="skill-name">JavaScript (ES6+)</h4>
+                <span class="skill-badge-level">Intermediário</span>
+              </div>
+              <p class="skill-description">
+                Manipulação da DOM, Fetch API assíncrona, Promises, arrow functions, desestruturação e validação de formulários.
+              </p>
+              <div class="skill-progress-bar">
+                <div class="skill-progress" style="--level: 75%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: Git & GitHub -->
+          <div class="skill-card reveal-on-scroll">
+            <div class="skill-icon-wrap git">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </div>
+            <div class="skill-content">
+              <div class="skill-head">
+                <h4 class="skill-name">Git & GitHub</h4>
+                <span class="skill-badge-level">Intermediário</span>
+              </div>
+              <p class="skill-description">
+                Controle de versões, commits semânticos, ramificações (branches), gestão de repositórios remotos e colaboração.
+              </p>
+              <div class="skill-progress-bar">
+                <div class="skill-progress" style="--level: 75%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: Desenvolvimento Front-end -->
+          <div class="skill-card reveal-on-scroll">
+            <div class="skill-icon-wrap front">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div class="skill-content">
+              <div class="skill-head">
+                <h4 class="skill-name">Desenvolvimento Front-end</h4>
+                <span class="skill-badge-level">Intermediário</span>
+              </div>
+              <p class="skill-description">
+                Criação de interfaces amigáveis ao usuário, integração com endpoints REST e fidelidade visual aos protótipos.
+              </p>
+              <div class="skill-progress-bar">
+                <div class="skill-progress" style="--level: 76%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: Visual Studio Code -->
+          <div class="skill-card reveal-on-scroll">
+            <div class="skill-icon-wrap vscode">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+                <line x1="10" y1="19" x2="14" y2="5"></line>
+              </svg>
+            </div>
+            <div class="skill-content">
+              <div class="skill-head">
+                <h4 class="skill-name">Visual Studio Code</h4>
+                <span class="skill-badge-level">Prático</span>
+              </div>
+              <p class="skill-description">
+                Ambiente principal de desenvolvimento, atalhos produtivos, depuração, integração Git e extensões de código.
+              </p>
+              <div class="skill-progress-bar">
+                <div class="skill-progress" style="--level: 85%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: Hospedagem e Vercel -->
+          <div class="skill-card reveal-on-scroll">
+            <div class="skill-icon-wrap vercel">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                <path d="M12 1L24 22H0L12 1Z"/>
+              </svg>
+            </div>
+            <div class="skill-content">
+              <div class="skill-head">
+                <h4 class="skill-name">Hospedagem & Vercel</h4>
+                <span class="skill-badge-level">Prático</span>
+              </div>
+              <p class="skill-description">
+                Configuração de deploy contínuo integrado ao GitHub, gerenciamento de rotas e publicação ágil de sites e APIs.
+              </p>
+              <div class="skill-progress-bar">
+                <div class="skill-progress" style="--level: 72%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill: Java & Arquitetura MVC -->
+          <div class="skill-card reveal-on-scroll">
+            <div class="skill-icon-wrap java">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
+              </svg>
+            </div>
+            <div class="skill-content">
+              <div class="skill-head">
+                <h4 class="skill-name">Java & Arquitetura MVC</h4>
+                <span class="skill-badge-level">Em Formação</span>
+              </div>
+              <p class="skill-description">
+                Programação Orientada a Objetos (POO), Spring Boot, Spring Data JPA e separação em Model-View-Controller.
+              </p>
+              <div class="skill-progress-bar">
+                <div class="skill-progress" style="--level: 65%"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO CONTATO -->
+    <section class="section contact-section" id="contato">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">04. Vamos conversar?</span>
+          <h2 class="section-title">Contato</h2>
+          <p class="section-subtitle">
+            Tem alguma oportunidade, dúvida ou quer trocar ideias sobre tecnologia e projetos? Entre em contato comigo!
+          </p>
+          <div class="section-bar"></div>
+        </div>
+
+        <div class="contact-wrapper">
+          
+          <!-- Informações de Contato -->
+          <div class="contact-info-panel reveal-on-scroll">
+            <h3 class="panel-title">Canais de Contato</h3>
+            <p class="panel-desc">
+              Você pode acompanhar todos os meus repositórios no GitHub ou preencher o formulário ao lado para gerar sua mensagem formatada com rapidez.
+            </p>
+
+            <div class="contact-cards-list">
+              <!-- Card GitHub -->
+              <a href="https://github.com/37661-hue" target="_blank" rel="noopener noreferrer" class="contact-card-link">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <div class="contact-card-content">
+                  <span class="card-label">GitHub Oficial</span>
+                  <span class="card-value">github.com/37661-hue</span>
+                  <span class="card-subvalue">Repositórios públicos & código autoral</span>
+                </div>
+                <div class="card-arrow">→</div>
+              </a>
+
+              <!-- Card Status Disponibilidade -->
+              <div class="contact-card-status">
+                <div class="status-indicator"></div>
+                <div class="status-details">
+                  <span class="status-header">Status Atual</span>
+                  <span class="status-body">Estudante de TI aberto a oportunidades de estágio, projetos colaborativos e networking.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulário de Contato -->
+          <div class="contact-form-panel reveal-on-scroll">
+            <form id="contactForm" class="contact-form" novalidate>
+              
+              <div class="form-group">
+                <label for="userName" class="form-label">Seu Nome <span class="required">*</span></label>
+                <input type="text" id="userName" name="name" class="form-input" placeholder="Digite seu nome completo" required autocomplete="name">
+                <span class="form-error" id="nameError">Por favor, informe seu nome.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="userEmail" class="form-label">Seu E-mail <span class="required">*</span></label>
+                <input type="email" id="userEmail" name="email" class="form-input" placeholder="seuemail@exemplo.com" required autocomplete="email">
+                <span class="form-error" id="emailError">Por favor, insira um e-mail válido.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="userSubject" class="form-label">Assunto <span class="required">*</span></label>
+                <input type="text" id="userSubject" name="subject" class="form-input" placeholder="Sobre o que gostaria de falar?" required>
+                <span class="form-error" id="subjectError">Por favor, informe o assunto da mensagem.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage" class="form-label">Mensagem <span class="required">*</span></label>
+                <textarea id="userMessage" name="message" class="form-textarea" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                <span class="form-error" id="messageError">Por favor, digite sua mensagem.</span>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-lg" id="btnSubmitContact">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span>Copiar Mensagem</span>
+                </button>
+
+                <button type="button" class="btn btn-outline btn-lg" id="btnOpenMail">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>Abrir no E-mail</span>
+                </button>
+              </div>
+
+            </form>
+
+            <!-- Feedback de Sucesso pós-cópia -->
+            <div class="form-feedback-card" id="formFeedbackCard" style="display: none;">
+              <div class="feedback-icon-check">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <h4 class="feedback-title">Mensagem copiada com sucesso!</h4>
+              <p class="feedback-msg">
+                O texto formatado foi transferido para a sua área de transferência. Agora basta colá-lo (Ctrl+V) no seu canal de comunicação favorito para enviar a Cauã.
+              </p>
+              <button type="button" class="btn btn-secondary btn-sm" id="btnResetForm">Escrever outra mensagem</button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ (FOOTER) -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#inicio" class="footer-logo">
+            <span class="brand-symbol">&lt;C/S&gt;</span>
+            <span class="footer-logo-text">Cauã Nascimento Sanches</span>
+          </a>
+          <p class="footer-tagline">
+            Cauã Nascimento Sanches — Desenvolvedor em Formação.
+          </p>
+          <p class="footer-subtext">
+            Construindo soluções funcionais através da paixão por tecnologia e programação.
+          </p>
+        </div>
+
+        <nav class="footer-links" aria-label="Links rápidos do rodapé">
+          <span class="footer-heading">Navegação</span>
+          <a href="#inicio">Início</a>
+          <a href="#sobre">Sobre Mim</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#habilidades">Habilidades</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="footer-social-column">
+          <span class="footer-heading">Conecte-se</span>
+          <a href="https://github.com/37661-hue" target="_blank" rel="noopener noreferrer" class="social-link-item">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GitHub (@37661-hue)</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 — Todos os direitos reservados.
+        </p>
+        <p class="footer-built">
+          Desenvolvido com HTML5, CSS3 e JavaScript puro. Hospedado na Vercel.
+        </p>
+        <a href="#inicio" class="back-to-top" id="backToTop" aria-label="Voltar ao início">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Toast de Notificação -->
+  <div class="toast-notification" id="toastNotification" role="alert" aria-live="assertive">
+    <div class="toast-icon" id="toastIcon">✓</div>
+    <div class="toast-msg" id="toastMsg">Mensagem copiada para a área de transferência!</div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
+
